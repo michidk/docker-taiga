@@ -50,6 +50,3 @@ RUN set -ex; \
     unzip /tmp/taiga-contrib-openid-auth.zip -d /tmp/; \
     LC_ALL=C pip install --no-cache-dir /tmp/taiga-contrib-openid-auth-master/back; \
     rm -rf /tmp/taiga-contrib-openid-auth
-
-# Backend healthcheck
-HEALTHCHECK CMD curl --fail http://127.0.0.1:8001/api/v1/ || exit 1
